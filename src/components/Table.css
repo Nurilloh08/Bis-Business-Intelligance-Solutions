@@ -1,0 +1,161 @@
+/* table.css */
+.table-container {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336; /* Qizil rang */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cancel-button:hover {
+  background-color: #c62828; /* Qizil rangning qorayishi */
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.styled-table th {
+  background-color: #ffffff;
+}
+
+.styled-table tr {
+  background-color: #ffffff;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.pagination button {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Edit and Delete buttons */
+.edit-button {
+  background-color: #4CAF50; /* Yashil rang */
+  border: none;
+  color: white;
+  padding: 6px 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.edit-button:hover {
+  background-color: #45a049; /* Yashil rangning qorayishi */
+}
+
+.delete-button {
+  background-color: #f44336; /* Qizil rang */
+  border: none;
+  color: white;
+  padding: 6px 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  margin-left: 7px;
+}
+
+.delete-button:hover {
+  background-color: #c62828; /* Qizil rangning qorayishi */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 8px;
+  }
+
+  .add-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .cancel-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}

@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-menu {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #0A4D68;
+  width: 250px;
+  height: 100vh;
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  padding: 10px;
+}
+
+.logo-section img {
+  max-width: 140px; /* Logolarni kattaligi */
+  height: auto;
+  margin-right: 20px; /* Logolar orasidagi bo'shliq */
+}
+
+.logo-section img:last-child {
+  margin-right: 0; /* Oxirgi logoda bo'sh joy bo'lmasligi uchun */
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-list li {
+  margin: 8px 0; /* Marginni to'g'rilash */
+  color: #ffffff;
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-icon {
+  margin-left: 10px; /* Toggle ikonining pozitsiyasini yaxshilash */
+}
+
+.submenu-list {
+  list-style: none;
+  padding-left: 0; /* Paddingni olib tashlash */
+  margin-top: 0; /* Margin-topni olib tashlash */
+}
+
+.submenu-item {
+  color: #11c8b8;
+  margin: 6px 0; /* Marginni to'g'rilash */
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px; /* Yuvarlak burchaklar */
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.submenu-item.active {
+  background-color: #83bfeda8; /* Faol subItemning fon rangini oq qilamiz */
+  color: #000000; /* Matn rangini qora qilamiz */
+}
