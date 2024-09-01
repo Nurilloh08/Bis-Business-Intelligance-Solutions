@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import logo from '../BIS.png'; // Faylni import qilish
 import newLogo from '../nav.png'; // Yangi logoni import qilish
-import Table from './Table'; // Table komponentini import qilish
 import './NavigationMenu.css';
+import Table from './Table'; // Table komponentini import qilish
 
 function NavigationMenu({ onSubItemClick }) {
   const [openIndex, setOpenIndex] = useState(null);
   const [activeSubItem, setActiveSubItem] = useState({ index: null, subIndex: null });
-  const [showTable, setShowTable] = useState(false); // Jadvalni ko'rsatish holatini saqlash uchun
+  const [showTable, setShowTable] = useState(false); // Jadval ko'rsatish holatini saqlash uchun
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -15,13 +15,12 @@ function NavigationMenu({ onSubItemClick }) {
 
   const handleSubItemClick = (index, subIndex, sectionName, subItemName) => {
     setActiveSubItem({ index, subIndex });
-    // Jadvalni faqat "Склад" -> "Склады" tanlanganda ko'rsatish
-    if (sectionName === 'Склад' && subItemName === 'Склады ') {
-      setShowTable(true);
+    onSubItemClick(sectionName, subItemName); // onSubItemClick prop ni chaqiramiz
+    if (sectionName === 'Склад') {
+      setShowTable(true); // Jadvalni ko'rsatish
     } else {
-      setShowTable(false);
+      setShowTable(false); // Jadvalni yashirish
     }
-    onSubItemClick(sectionName, subItemName);
   };
 
   const sections = [
@@ -72,7 +71,8 @@ function NavigationMenu({ onSubItemClick }) {
           </li>
         ))}
       </ul>
-      {showTable && <Table />}
+
+    
     </div>
   );
 }
