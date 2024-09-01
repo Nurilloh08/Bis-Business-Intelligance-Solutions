@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bis-Business-Intelligance-Solutions/static/css/main.9a8318be.css",
+    "main.js": "/Bis-Business-Intelligance-Solutions/static/js/main.8b21f224.js",
+    "index.html": "/Bis-Business-Intelligance-Solutions/index.html",
+    "main.9a8318be.css.map": "/Bis-Business-Intelligance-Solutions/static/css/main.9a8318be.css.map",
+    "main.8b21f224.js.map": "/Bis-Business-Intelligance-Solutions/static/js/main.8b21f224.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a8318be.css",
+    "static/js/main.8b21f224.js"
+  ]
+}
